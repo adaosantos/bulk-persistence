@@ -1,2 +1,9 @@
+# frozen_string_literal: true
+
 module BulkPersistence
-  module Concerns
+  require 'active_record'
+  require 'bulk_persistence/relation'
+end
+
+# Extend ActiveRecord::Relation's
+ActiveRecord::Relation.extend BulkPersistence::Relation
